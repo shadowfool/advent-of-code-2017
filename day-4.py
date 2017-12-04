@@ -1,4 +1,6 @@
+
 input = [line.rstrip() for line in open('./inputs/day4.txt')]
+
 badWords = 0
 
 for line in input: 
@@ -12,8 +14,3 @@ for line in input:
     dictionary[ word ] = 1
 
 print(len(input) - badWords)
-
-
-444
-
-456
