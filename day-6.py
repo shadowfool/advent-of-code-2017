@@ -21,7 +21,7 @@ def findHighestNumber( arr ):
 
 
 while cont is True:
-  pastMoves[ ('-').join( mapIntToString( input ) ) ] = True
+  if round != 0: pastMoves[ ('-').join( mapIntToString( input ) ) ] = round
 
   count = 0
   input = mapStringsToInt(input)
@@ -40,39 +40,6 @@ while cont is True:
     cont = False
     break;
 
-print(round)
-
-
-###### ROUND 2 ###########
-
-cont2 = True
-round2 = 0
-pastMoves2 = {}
-
-input2 = open('./inputs/day6.txt', 'r').read().split(' ')
-
-input2 = mapIntToString( input2 )
-
-checkFor = ('-').join( input2 )
-
-input2 = mapStringsToInt(input2)
-print(checkFor)
-
-while cont2 is True:
-
-  count2 = 0
-  round2 += 1
-  highestIndex2 = findHighestNumber( input2 )
-  count2 = input2[ highestIndex2 ]
-  input2[ highestIndex2 ] = 0
-  currentIndex2 = highestIndex2
-
-  while count2 is not 0:
-    currentIndex2 += 1
-    if currentIndex2 > len(input2) - 1: currentIndex2 = 0
-    input2[ currentIndex2 ] = input2[ currentIndex2 ] + 1
-    count2 -= 1
-    
-
-print(round2, input2)
+key = ('-').join( mapIntToString([2, 8, 8, 5, 4, 2, 3, 1, 5, 5, 1, 2, 15, 13, 5, 14]))
+print(round,  pastMoves[ key ])
 
